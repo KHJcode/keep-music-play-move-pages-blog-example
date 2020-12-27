@@ -1,25 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import { Route } from 'react-router-dom'; 
+import Home from './pages/Home';
+import Author from './pages/Author';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Route exact path='/' component={Home} />
+      <Route exact path='/author' component={Author} />
+      <audio src='https://docs.google.com/uc?export=open&id=14JlzHWUE2TqAsN237ft43SOw02xDPori' autoPlay={true}></audio>
     </div>
   );
 }
+
 
 export default App;
